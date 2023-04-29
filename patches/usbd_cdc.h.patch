@@ -1,0 +1,6 @@
+141a142,146
+> 
+> #define USBD_MODE_CDC  0
+> #define USBD_MODE_MIDI 1
+> extern uint8_t usbd_mode;
+> 
