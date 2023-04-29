@@ -1,6 +1,7 @@
 [submodule "lib/libDaisy"]
 	path = lib/libDaisy
 	url = git@github.com:netherwaves/libDaisy.git
+	branch = feature/pio-library
 [submodule "lib/DaisySP"]
 	path = lib/DaisySP
 	url = git@github.com:netherwaves/DaisySP.git
