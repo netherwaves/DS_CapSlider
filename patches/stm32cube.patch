@@ -1,0 +1,62 @@
+46a47
+> PROJECT_DIR = env.get('PROJECT_DIR')
+139c140,141
+<         FRAMEWORK_DIR,
+---
+>         PROJECT_DIR,
+>         "lib/libDaisy",
+204c206
+<     dsp_lib_path = os.path.join(FRAMEWORK_DIR, "Drivers", "CMSIS", "DSP", "Lib", "GCC")
+---
+>     dsp_lib_path = os.path.join(PROJECT_DIR, "lib/libDaisy", "Drivers", "CMSIS", "DSP", "Lib", "GCC")
+206c208
+<         dsp_lib_path = os.path.join(FRAMEWORK_DIR, "Drivers", "CMSIS", "Lib", "GCC")
+---
+>         dsp_lib_path = os.path.join(PROJECT_DIR, "lib/libDaisy", "Drivers", "CMSIS", "Lib", "GCC")
+210c212
+<             os.path.join(FRAMEWORK_DIR, "Drivers", "CMSIS", "DSP", "Include"),
+---
+>             os.path.join(PROJECT_DIR, "lib/libDaisy", "Drivers", "CMSIS", "DSP", "Include"),
+245c247
+<         os.path.join(FRAMEWORK_DIR, "Drivers", "CMSIS", "Include"),
+---
+>         os.path.join(PROJECT_DIR, "lib/libDaisy", "Drivers", "CMSIS", "Include"),
+247c249,250
+<             FRAMEWORK_DIR,
+---
+>             PROJECT_DIR,
+>             "lib/libDaisy",
+256c259,260
+<             FRAMEWORK_DIR,
+---
+>             PROJECT_DIR,
+>             "lib/libDaisy",
+262c266,267
+<             FRAMEWORK_DIR,
+---
+>             PROJECT_DIR,
+>             "lib/libDaisy",
+296c301
+< bsp_dir = os.path.join(FRAMEWORK_DIR, "Drivers", "BSP")
+---
+> bsp_dir = os.path.join(PROJECT_DIR, "lib/libDaisy", "Drivers", "BSP")
+350c355
+<         FRAMEWORK_DIR, "Drivers", "BSP", board.get("build.stm32cube.variant")
+---
+>         PROJECT_DIR, "lib/libDaisy", "Drivers", "BSP", board.get("build.stm32cube.variant")
+367c372
+< generate_hal_config_file()
+---
+> # generate_hal_config_file()
+372c377
+<         FRAMEWORK_DIR,
+---
+>         PROJECT_DIR, "lib/libDaisy",
+385c390
+<         FRAMEWORK_DIR,
+---
+>         PROJECT_DIR, "lib/libDaisy",
+395c400
+<     prepare_startup_file(sources_path)
+---
+>     # prepare_startup_file(sources_path)

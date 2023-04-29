@@ -71,6 +71,10 @@ USBD_CLASS = join(FRAMEWORK_DIR, "Middlewares", "ST", "STM32_USB_Device_Library"
 
 patches = [
     {
+    "original": join(env.get('PROJECT_DIR'), "platforms", "ststm32", "builder", "frameworks", "stm32cube.py"),
+    "patch": join("patches", "stm32cube.patch")
+    },
+    {
     "original": join(USBD_CLASS, "Class", "CDC", "Inc", "usbd_cdc.h"),
     "patch": join("patches", "usbd_cdc.h.patch")
     },
