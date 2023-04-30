@@ -1,0 +1,9 @@
+{
+  "name": "CapacitiveSlider",
+  "version": "0.0.1",
+  "build": {
+    "srcDir": "./",
+    "srcFilter": ["+<src>"],
+    "flags": ["-Isrc"]
+  }
+}
