@@ -5,3 +5,6 @@
 [submodule "lib/DaisySP"]
 	path = lib/DaisySP
 	url = git@github.com:netherwaves/DaisySP.git
+[submodule "lib/DaisyOSC"]
+	path = lib/DaisyOSC
+	url = git@github.com:netherwaves/DaisyOSC.git
