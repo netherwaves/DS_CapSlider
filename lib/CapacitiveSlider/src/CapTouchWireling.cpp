@@ -25,13 +25,16 @@ The latest version of this library can be found at https://tinycircuits.com/
 namespace daisy
 {
 
-  CapTouchWireling::CapTouchWireling(I2CHandle *i2c, uint8_t addr) : ATtiny841Lib(i2c)
+  CapTouchWireling::CapTouchWireling() : ATtiny841Lib()
   {
-    address = T841_ADDRESS + addr;
+    // address = T841_ADDRESS + addr;
   }
 
-  uint8_t CapTouchWireling::begin(void)
+  uint8_t CapTouchWireling::begin(I2CHandle &i2c, uint8_t addr)
   {
+    _i2c = &i2c;
+    address = T841_ADDRESS + addr;
+
     writeByte(COMMAND_SET_MODE, MODE_REGISTER_DEC); // write to the T841 registers directly
     if (read(FIRMWARE_REVISION_REG) != EXPECTED_CAPTOUCHWIRELING_FIRMWARE)
       return 1;

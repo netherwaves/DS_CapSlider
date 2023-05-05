@@ -104,7 +104,7 @@ namespace daisy
   class ATtiny841Lib
   {
   public:
-    ATtiny841Lib(I2CHandle *);
+    ATtiny841Lib();
 
     void writeByte(uint8_t);
     void writeByte(uint8_t, uint8_t);

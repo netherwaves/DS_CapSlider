@@ -29,8 +29,8 @@ namespace daisy
   class CapTouchWireling : public ATtiny841Lib
   {
   public:
-    CapTouchWireling(I2CHandle *i2c, uint8_t addr = 0);
-    uint8_t begin();
+    CapTouchWireling();
+    uint8_t begin(I2CHandle &i2c, uint8_t addr = 0);
     uint16_t capTouchRead(uint8_t pin);
     int16_t getPosition(int range = 100);
     int16_t getMaxReading();

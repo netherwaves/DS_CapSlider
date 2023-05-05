@@ -25,7 +25,7 @@ The latest version of this library can be found at https://tinycircuits.com/
 
 namespace daisy
 {
-  ATtiny841Lib::ATtiny841Lib(I2CHandle *i2c) : _i2c(i2c)
+  ATtiny841Lib::ATtiny841Lib()
   {
   }
 
