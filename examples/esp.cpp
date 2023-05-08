@@ -4,22 +4,10 @@
 
 using namespace daisy;
 using namespace daisy::seed;
-using namespace daisysp;
 
-Oscillator  osc;
 DaisySeed   hw;
 UartHandler uart;
 WiFi        wifi;
-
-void AudioCallback(AudioHandle::InterleavingInputBuffer  in,
-                   AudioHandle::InterleavingOutputBuffer out,
-                   size_t                                size)
-{
-    for(size_t i = 0; i < size; i += 2)
-    {
-        out[i] = out[i + 1] = osc.Process();
-    }
-}
 
 int main(void)
 {
@@ -28,9 +16,6 @@ int main(void)
 
     hw.StartLog(true);
     System::Delay(1000);
-
-    hw.SetAudioBlockSize(4);
-    float sample_rate = hw.AudioSampleRate();
 
     // UART
     UartHandler::Config uart_cfg;
@@ -64,9 +49,7 @@ int main(void)
     }
     hw.PrintLine("OK");
 
-    // start audio
-    hw.StartAudio(AudioCallback);
-
+    // for posterity ...
     hw.SetLed(1);
 
     // loop
